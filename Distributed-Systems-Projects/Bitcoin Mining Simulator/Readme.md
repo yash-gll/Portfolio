@@ -1,7 +1,7 @@
 # Project 1
 **Group Members:**
 1. Yash Goel, UFID - 51939756
-2. Srikruth Reddy Puram, UFID - 70678514
+2. Srikruth Reddy Puram, UFID - 70678614
 
 **Outline:**
 
