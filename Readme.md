@@ -66,8 +66,6 @@ We have defined the number of processes to run as = No. of Cores * 4. This ensur
 CPU time/ Run Time: 7.500693317099144
 
 \
-\
-
 
 **4. Result for 5 leading zeros on miners spawned by both server and external client using IP address**
 
@@ -75,26 +73,29 @@ CPU time/ Run Time: 7.500693317099144
 
 *Fig.4 Starting the server to mine bitcoins with 5 trailing zeros by spawning 2 miners on server and rest will be connected externally from different machine.*
 
-![Fig-5](https://user-images.githubusercontent.com/113138630/192105762-916e678d-be46-46e0-830f-ed2774a34347.png)
+![WhatsApp Image 2022-09-24 at 2 31 40 PM](https://user-images.githubusercontent.com/113138630/192113842-ec430298-0d93-410b-84fc-02c1ef9861bc.jpeg)
 
 *Fig.5 Starting miner on different machine.*
 
-![Fig-6](https://user-images.githubusercontent.com/113138630/192105766-13ea475c-ad0b-4b37-a5c5-8cc3946ef2f4.png)
+![WhatsApp Image 2022-09-24 at 2 31 46 PM](https://user-images.githubusercontent.com/113138630/192113895-4fc9f8d8-7709-4e3c-a5aa-73651d5b29ba.jpeg)
 
 *Fig.6 Server receives request from miner.*
 
-![Fig-7](https://user-images.githubusercontent.com/113138630/192105771-7fd48f5a-2eef-41e1-a1dd-2c36ca802a68.png)
+![WhatsApp Image 2022-09-24 at 2 38 08 PM](https://user-images.githubusercontent.com/113138630/192113950-96d0af4c-6e50-4e77-8cd9-4371fe6b1502.jpeg)
 
 *Fig.7 Starting 3 miners from different machine to connect to server.*
 
 
-Total clock time: 468174.336
+- <0.99.0> and <0.100.0> are miners hosted by server on machine 1.
+- <14200.88.0> is miner hosted by machine 2.
+- <14233.92.0> is miner hosted by machine 3.
 
-Total CPU time: 861953
+-Total clock time: 468174.336
 
-CPU time/ Run Time: 1.841094083380085
+-Total CPU time: 861953
 
-\
+-CPU time/ Run Time: 1.841094083380085
+
 \
 
 **5. Largest coin found (i.e., the coin with the highest number of leading 0's)**
@@ -110,6 +111,6 @@ We found the largest coin to have seven zeros. The program was run for few hours
 
 **6. Largest number of working machines**
 
-We were able to run the script on four nodes but the same could be scaled to run on many more. We were able to connect three different machines to mine on 1 server.
+We used Intel i7-8550U CPU (8 MB cache, 4 cores). We were able to run the script on four nodes but the same could be scaled to run on many more. We were able to connect three different machines to mine on 1 server.
   
   
