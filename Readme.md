@@ -42,38 +42,62 @@ we have defined the number of processes to run as = No. of Cores * 4. This ensur
 
 **3. Result for 4 leading zeros on 4 miners spawned by server**
 
-![img_1.png](img_1.png)
+![Fig-1](https://user-images.githubusercontent.com/113138630/192105081-608c5b80-7e72-4bda-84c1-1fe69280476f.png)
+
 *Fig.1 Starting the server to mine bitcoins with 4 trailing zeros by spawning 4 miners.*
 
-![img_2.png](img_2.png)
+![Fig-2](https://user-images.githubusercontent.com/113138630/192105369-a1e6cf0e-c4cc-4b31-9ff4-88526c0b982f.png)
+
 *Fig.2 Miners start mining.*
 
-![img_3.png](img_3.png)
+![Fig-3](https://user-images.githubusercontent.com/113138630/192105386-546be252-c4cd-4395-9cb4-2936349ffeb8.png)
+
 *Fig.3 CPU utilisation metrics.*
 
-CPU time/ Run Time 7.500693317099144
+CPU time/ Run Time: 7.500693317099144
+
+\
+\
 
 
 **4. Result for 5 leading zeros on miners spawned by both server and external client using IP address**
 
-![img_4.png](img_4.png)
+![Fig-4](https://user-images.githubusercontent.com/113138630/192105395-a0604309-7447-4857-bb18-14039551a930.png)
+
 *Fig.4 Starting the server to mine bitcoins with 5 trailing zeros by spawning 2 miners on server and rest will be connected externally from different machine.*
 
-![img_5.png](img_5.png)
+![Fig-5](https://user-images.githubusercontent.com/113138630/192105762-916e678d-be46-46e0-830f-ed2774a34347.png)
+
 *Fig.5 Starting miner on different machine.*
 
-![img_6.png](img_6.png)
+![Fig-6](https://user-images.githubusercontent.com/113138630/192105766-13ea475c-ad0b-4b37-a5c5-8cc3946ef2f4.png)
+
 *Fig.6 Server receives request from miner.*
 
-![img_8.png](img_8.png)
+![Fig-7](https://user-images.githubusercontent.com/113138630/192105771-7fd48f5a-2eef-41e1-a1dd-2c36ca802a68.png)
+
 *Fig.7 Starting 3 miners from different machine to connect to server.*
 
-Total clock time: 468174.336
-Toal CPU time 861953
-CPU time/ Run Time 1.841094083380085
 
+Total clock time: 468174.336
+
+Total CPU time: 861953
+
+CPU time/ Run Time: 1.841094083380085
+
+\
+\
 
 **5. Largest coin found (i.e., the coin with the highest number of leading 0's)**
+
+We found the largest coin to have seven zeros. The program was run for few hours to find 8 zeros, but no coins were found and the program was stopped.
+
+![Fig-8](https://user-images.githubusercontent.com/113138630/192107638-7b7bca73-f091-4238-9257-fb5383975ee0.png)
+
+*Fig.8 Largest coin found with highest leading zeros*
+\
+\
+
 
 **6. Largest number of working machines**
 
