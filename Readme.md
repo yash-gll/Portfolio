@@ -1,4 +1,4 @@
-# Projects for Coursework- DOSP-2022
+# Projects for Coursework- COP5615-Distributed Operating System Principles
 
 Projects completed Successfully by Yash Goel(UFID-51939756)
  
