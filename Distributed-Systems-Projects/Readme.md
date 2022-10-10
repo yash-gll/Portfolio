@@ -4,12 +4,12 @@ Projects completed Successfully by Yash Goel(UFID-51939756)
  
 ## Projects Description
 
-### Project 1 Distributed Bit Coin Miner on Elixir
+### Project 1 Distributed Bit Coin Miner on Erlang
 
-Bitcoins are the most popular crypto-currency in common use. At their hart, bitcoins use the hardness of cryptographic hashing to ensure a limited “supply” of coins. In particular, the key component in a bitcoin is an input that, when “hashed” produces an output smaller than a target value. In practice, the comparison values have leading 0’s, thus the bitcoin is required to have a given number of leading 0’s. The hash you are required to use is SHA-256. For the coins we find, we check our answer with the calculator to ensure correctness. The goal of this first project is to use Erlang and the actor model to build a good solution to this problem that runs well on multi-core machines.
+Bitcoins are the most popular crypto-currency in common use. At their hart, bitcoins use the hardness of cryptographic hashing to ensure a limited “supply” of coins. In particular, the key component in a bitcoin is an input that, when “hashed” produces an output smaller than a target value. In practice, the comparison values have leading 0’s, thus the bitcoin is required to have a given number of leading 0’s. The hash used is SHA-256. For the coins we find, we check our answer with the calculator to ensure correctness. The goal of this first project is to use Erlang and the actor model to build a good solution to this problem that runs well on multi-core machines.
 
 ###  Project 2 Gossip Simulator
-As described in class Gossip type algorithms can be used both for group communication and for aggregate computation. The goal of this project is to determine the convergence of such algorithms through a simulator based on actors written in Elixir. Since actors in Elixir are fully asynchronous, the particular type of Gossip implemented is the so called Asynchronous Gossip. Gossip Algorithm for information propagation<br>
+Gossip type algorithms can be used both for group communication and for aggregate computation. The goal of this project is to determine the convergence of such algorithms through a simulator based on actors written in Erlang. Since actors in Erlang are fully asynchronous, the particular type of Gossip implemented is the so called Asynchronous Gossip. Gossip Algorithm for information propagation<br>
 
 The Gossip algorithm:
 • <b>Starting</b>: A participant(actor) it told/sent a roumor(fact) by the main process<br>
@@ -27,7 +27,7 @@ Push-Sum algorithm
 
 The actual network topology plays a critical role in the dissemination speed of Gossip protocols. As part of this project you have to experiment with various topologies. The topology determines who is considered a neighboor in the above algorithms.
 
-•<b> Full Network</b> Every actor is a neighboor of all other actors. That is, every actor can talk directly to any other actor.<br>
+• <b>Full Network</b> Every actor is a neighboor of all other actors. That is, every actor can talk directly to any other actor.<br>
 • <b>2D Grid</b> Actors form a 2D grid. The actors can only talk to the grid neigboors.<br>
 • <b>Line: Actors</b> are arranged in a line. Each actor has only 2 neighboors (one left and one right, unless you are the first or last actor).<br>
 • <b>Imperfect 2D Grid</b> Grid arrangement but one random other neighboor is selected from the list of all actors (4+1 neighboors).<br>
