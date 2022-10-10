@@ -21,16 +21,16 @@ Push-Sum algorithm
 • <b>State</b>: Each actor Ai maintains two quantities: s and w. Initially, s = xi = i (that is actor number i has value i, play with other distribution if you so desire) and w = 1<br>
 • <b>Starting</b>: Ask one of the actors to start from the main process.<br>
 • <b>Receive</b>: Messages sent and received are pairs of the form (s, w). Upon receive, an actor should add received pair to its own corresponding values. Upon receive, each actor selects a random neighbour and sends it a message.<br>
-• <b>Send</b>: When sending a message to another actor, half of s and w is kept by the sending actor and half is placed in the message.
+• <b>Send</b>: When sending a message to another actor, half of s and w is kept by the sending actor and half is placed in the message. <br>
 • <b>Sum estimate</b>: At any given moment of time, the sum estimate is s/w where s and w are the current values of an actor.<br>
-• <b>Termination</b>: If an actors ratio s/w did not change more than 10^-10 in 3 consecutive rounds the actor terminates. WARNING: the values s and w independently never converge, only the ratio does.<br>
+• <b>Termination</b>: If an actors ratio s/w did not change more than 10^-10 in 3 consecutive rounds the actor terminates. <br>
 
 The actual network topology plays a critical role in the dissemination speed of Gossip protocols. As part of this project you have to experiment with various topologies. The topology determines who is considered a neighboor in the above algorithms.
 
 • <b>Full Network</b> Every actor is a neighboor of all other actors. That is, every actor can talk directly to any other actor.<br>
 • <b>2D Grid</b> Actors form a 2D grid. The actors can only talk to the grid neigboors.<br>
-• <b>Line: Actors</b> are arranged in a line. Each actor has only 2 neighboors (one left and one right, unless you are the first or last actor).<br>
-• <b>Imperfect 2D Grid</b> Grid arrangement but one random other neighboor is selected from the list of all actors (4+1 neighboors).<br>
+• <b>Line: Actors</b> are arranged in a line. Each actor has only 2 neighboors.<br>
+• <b>Imperfect 2D Grid</b> Grid arrangement but one random other neighboor is selected from the list of all actors.<br>
 
 ###  Project 3 Pastry Implementation
 
