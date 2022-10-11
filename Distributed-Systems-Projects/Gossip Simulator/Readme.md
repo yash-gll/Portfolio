@@ -71,7 +71,7 @@ We designed the Push-sum algorithm so that it converges when the S/W ratio of th
 <div align="center"> *Fig.5  Push-Sum Algorithm - 10,000 nodes with Imperfect 3D topology.* </div>\
 
 ![push_sum_end](https://user-images.githubusercontent.com/113138630/194981510-8064e18a-6451-4aa1-872d-f39fe8e0abcc.png)
-<div align="center"> *Fig.6 Push-Sum Algorithm - Linear Scale.* </div>\
+<div align="center"> *Fig.6Convergence Time for Push-Sum Algorithm - 10,000 nodes with Imperfect 3D topology.* </div>\
 
 ![Convergence_Liner_Push_Sum](https://user-images.githubusercontent.com/113138630/194963231-e3ed487d-3bb1-4d44-8cbe-92636e283d65.png)
 <div align="center"> *Fig.7 Push-Sum Algorithm - Linear Scale.* </div>\
