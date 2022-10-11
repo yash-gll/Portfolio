@@ -51,20 +51,33 @@ We designed the Push-sum algorithm so that it converges when the S/W ratio of th
 
 **2. Result for gossip algorithm**
 
+
+![gossip_10000](https://user-images.githubusercontent.com/113138630/194977927-9bd55486-09e4-4155-bf52-ce0150648294.png)
+<div align="center"> *Fig.1 Gossip Algorithm - 10,000 nodes with Imperfect 3D topology.* </div>\
+
+![gossip_end](https://user-images.githubusercontent.com/113138630/194977965-2ab57738-f6b5-442f-8e9e-8479c3405141.png)
+<div align="center"> *Fig.2 Convergence Time for Gossip Algorithm - 10,000 nodes with Imperfect 3D topology.* </div>\
+
 ![Convergence_Liner](https://user-images.githubusercontent.com/113138630/194959350-d55e0d42-6d50-4afa-8446-874ef5f1915a.png)
-<div align="center"> *Fig.1 Gossip Algorithm - Linear Scale.* </div>\
+<div align="center"> *Fig.3 Gossip Algorithm - Linear Scale.* </div>\
 
 ![Convergence_Log](https://user-images.githubusercontent.com/113138630/194959365-e105d6cd-d9bf-4a1f-9e3f-3ef6635d73dc.png)
-<div align="center"> *Fig.2 Gossip Algorithm - Logarithmic Scale.* </div>\
+<div align="center"> *Fig.4 Gossip Algorithm - Logarithmic Scale.* </div>\
 
 
 **3. Result for push-sum algorithm**
 
+![push_sum_10000](https://user-images.githubusercontent.com/113138630/194978271-2732222a-0219-46fe-a194-0ef79735df02.png)
+<div align="center"> *Fig.5  Push-Sum Algorithm - 10,000 nodes with Imperfect 3D topology.* </div>\
+
+![push_sum_end](https://user-images.githubusercontent.com/113138630/194981510-8064e18a-6451-4aa1-872d-f39fe8e0abcc.png)
+<div align="center"> *Fig.6 Push-Sum Algorithm - Linear Scale.* </div>\
+
 ![Convergence_Liner_Push_Sum](https://user-images.githubusercontent.com/113138630/194963231-e3ed487d-3bb1-4d44-8cbe-92636e283d65.png)
-<div align="center"> *Fig.3 Push-Sum Algorithm - Linear Scale.* </div>\
+<div align="center"> *Fig.7 Push-Sum Algorithm - Linear Scale.* </div>\
 
 ![Convergence_Log_Push_Sum](https://user-images.githubusercontent.com/113138630/194963277-29373317-243b-4541-8fbe-399185109fde.png)
-<div align="center"> *Fig.4 Push-Sum Algorithm - Logarithmic Scale.* </div>\
+<div align="center"> *Fig.8 Push-Sum Algorithm - Logarithmic Scale.* </div>\
 
 
 **4. Highlight Points**
