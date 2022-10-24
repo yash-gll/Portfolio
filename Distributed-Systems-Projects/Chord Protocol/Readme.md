@@ -24,23 +24,23 @@ To run the program, execute main.erl by following the above directions, fill the
 
 **main.erl**
 
-This code takes general inputs from the user, builds the desired network by calling the other module and spawns the processes accordingly.
+This code takes general inputs from the user, builds the desired network by calling the other module and spawns the processes accordingly. 
 
 **generate_chord_network.erl**
 
-This code implement the chord network by initialising a ring and then adding nodes, every time a new node is added t stabilises the ring and checks for a nodes task completion as well as overall network's task completion and display the average hops and time required to reach there.
+This code implements the chord network by initializing a ring and then adding nodes, every time a new node is added t stabilizes the ring and checks for a node's task completion as well as overall network's task completion and display the average hops and time required to reach there. 
 
 **generate_node.erl**
 
-This code handles the cast and call functions, it generates the processes and updates the finger table after extracting the succesor and notifying the predecssor to update the current state and current node list.This then gets the nearest node and gets it's successor. FInally, it checks if a partcicular node has completed its task or not.
+This code handles the cast and call functions, it generates the processes and updates the finger table after extracting the successor and notifying the predecessor to update the current state and current node list. This then gets to the nearest node and gets its successor. Finally, it checks if a particular node has completed its task or not. 
 
 **stabilize_chord_network.erl**
 
-This code stabilises our chord network and fixes the finger table at every new entry. It gets the successor and predecessor and updates their states and sends the meesage to the nodes. 
+This code stabilizes our chord network and fixes the finger table at every new entry. It gets the successor and predecessor and updates their states and sends the message to the nodes.  
 
 **utility_functions.erl**
 
-This code contains general functions that are utilised in all other files multiple time for faster access.
+This code contains general functions that are utilized in all other files multiple times for faster access. 
 
 ## Assignment Details
 
