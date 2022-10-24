@@ -45,15 +45,18 @@ This code contains general functions that are utilized in all other files multip
 ## Assignment Details
 
 **1. Work Unit:**
-1. We varied the number of nodes as a parameter to create 2^m nodes (M) where m = ceiling of log2n.
-2. We select n nodes from the given 1 to M nodes to generate the network and the reaming nodes i.e M-n nodes are stored with their successor for future use.
-3. We then select a random nodes from our generated network. This random node is searched by all the other memeber nodes in the chord ring, these members need to search this node exactly the number of times as specified by number of messages parameter.
-4. We then create a finger table for every generated node and stabilize our chord ring to calculate the average number of hops it took for one particular node to earch for another node.
+
+1. We varied the number of nodes as a parameter to create 2^m nodes (M) where m = ceiling of log2n. 
+2. We select n nodes from the given 1 to M nodes to generate the network and the reaming nodes i.e., M-n nodes are stored with their successor for future use. 
+3. We then select a random node from our generated network. This random node is searched by all the other member nodes in the chord ring, these members need to explore this node precisely the number of times as specified by several messages' parameter. 
+4. We then create a finger table for every generated node and stabilize our chord ring to calculate the average number of hops it took for one node to search for another node. 
 
 **2. What is working?**
-1. We implemented the chord network based on the algorithm/methodology discussed in the research paper.
-2. Initially there was a challenge while genrating distinct node ID as a result of the hashing algorithm specified in the problem statement. We resolved it by using m bit reduction and incorporated a random number approach to resolve the issue.
-3. The largest network was with 2000 nodes with 10 messages each, the average number of hops to reach the target node was in the range of [2.5 - 4.8] for number of nodes ranging from 100-2000. The average value is around 3.37 hops that is it takes 3.67 hops for a node to sarch for any other node in our chord ring.
+1. We implemented the chord network based on the algorithm/methodology discussed in the research paper. 
+2. Initially there was a challenge while generating distinct node ID as a result of the hashing algorithm specified in the problem statement. We resolved it by using m bit reduction and incorporated a random number approach to resolve the issue.
+3. The largest network was with 2000 nodes with 10 messages each, the average number of hops to reach the target node was in the range of [2.5 - 4.8] for number of nodes ranging from 100-2000. The average value is around 3.37 hops, that is it takes 3.67 hops for a node to search for any other node in our chord ring. 
+
+
 
 **3. Observations:**
 
