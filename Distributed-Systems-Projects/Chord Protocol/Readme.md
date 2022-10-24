@@ -66,3 +66,13 @@ This code contains general functions that are utilised in all other files multip
 
 
 **4. Result:**
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ![100](https://user-images.githubusercontent.com/113138630/197431131-4d5930c1-0169-4e48-b0d8-55c7c9cfc927.png)
+![100r](https://user-images.githubusercontent.com/113138630/197431158-faa9e99c-312f-4fa6-b99b-33dbc00c6d14.jpeg)
+<div align="center"> *Fig.1 Result for 100 nodes for 10 messages with 2 failure nodes.* </div>\
+
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ![1000](https://user-images.githubusercontent.com/113138630/197431908-b99b969c-8139-4fca-9ebc-1503bd6bbd0d.png)
+
+![WhatsApp Image 2022-10-23 at 8 41 23 PM (1)](https://user-images.githubusercontent.com/113138630/197431984-20df77da-704d-43bf-8d0f-41ba37b1c1d7.jpeg)
+<div align="center"> *Fig.2 Result for 1000 nodes for 10 messages with 5 failure nodes.* </div>\
