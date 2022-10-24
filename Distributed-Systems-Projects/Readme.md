@@ -12,6 +12,7 @@ Bitcoins are the most popular crypto-currency in common use. At their hart, bitc
 Gossip type algorithms can be used both for group communication and for aggregate computation. The goal of this project is to determine the convergence of such algorithms through a simulator based on actors written in Erlang. Since actors in Erlang are fully asynchronous, the particular type of Gossip implemented is the so called Asynchronous Gossip. Gossip Algorithm for information propagation<br>
 
 The Gossip algorithm:
+
 • <b>Starting</b>: A participant(actor) it told/sent a roumor(fact) by the main process<br>
 • <b>Step</b>: Each actor selects a random neighboor and tells it the roumor<br>
 • <b>Termination</b>: Each actor keeps track of rumors and how many times it has heard the rumor. It stops transmitting once it has heard the rumor 10 times (10 is arbitrary, you can select other values).<br>
@@ -32,41 +33,3 @@ The actual network topology plays a critical role in the dissemination speed of 
 • <b>Line: Actors</b> are arranged in a line. Each actor has only 2 neighboors.<br>
 • <b>Imperfect 2D Grid</b> Grid arrangement but one random other neighboor is selected from the list of all actors.<br>
 
-###  Project 3 Pastry Implementation
-
-We talked extensively in class about the overlay networks and how they can be used to provide services. The goal of this project is to implement in Elixir using the actor model the Pastry protocol and a simple object access service to prove its usefulness.The specification of the Pastry protocol can be found in the paper Pastry: Scalable, decentralized object location and routing for large-scale peer-topeer systems. by A. Rowstron and P. Druschel. You can find the paper at (http://rowstron.azurewebsites.net/PAST/pastry.pdf) The paper above, in Section 2.3 contains a specification of the Pastry API and of the API to be implemented by the application.
-
-###  Project 4 Part 1 Twitter Simulator without using Phoenix Web sockets
-
-In this project, you have to implement a Twitter Clone and a client tester/simulator.
-
-As of now, Tweeter does not seem to support a WebSocket API. As part I of this project, you need to build an engine that (in part II) will be paired up with WebSockets to provide full functionality. Specific things you have to do are:
-
-Implement a Twitter like engine with the following functionality:
-- <b>Register account</b><br>
-- <b>Send tweet</b>. Tweets can have hashtags (e.g. #COP5615isgreat) and mentions (@bestuser)<br>
-- <b>Subscribe to user's tweets</b><br>
-- <b>Re-tweets</b> (so that your subscribers get an interesting tweet you got by other means)<br>
-- Allow querying <b> tweets</b> subscribed to, tweets with specific hashtags, tweets in which the user is mentioned (my mentions)<br>
-- If the user is connected, deliver the above types of tweets <b> live</b> (without querying)<br>
-
-Implement a tester/simulator to test the above
--Simulate as many users as you can<br>
--Simulate periods of live connection and disconnection for users<br>
--Simulate a <b>Zipf distribution</b> on the number of subscribers. For accounts with a lot of subscribers, increase the number of tweets. Make some of these messages re-tweets<br>
-
-Other considerations:
--The client part (send/receive tweets) and the engine (distribute tweets) have to be in separate processes. Preferably, you use multiple independent client processes that simulate thousands of clients and a single engine process<br>
--You need to measure various aspects of your simulator and report performance<br>
-
-###  Project 4 Part 2 Twitter Simulator using Phoenix Web sockets
-
-Use Phoenix web framework to implement a WebSocket interface to your part I implementation. That means that, even though the Elixir implementation of your Part I project could use the Erlang messaging to allow client-server implementation, you now need to design and use a proper WebSocket interface. Specifically:
-
-- You need to design a JSON based API that  represents all messages and their replies (including errors)<br>
-- You need to re-write your engine using Phoenix to implement the WebSocket interface<br>
-- You need to re-write your client to use WebSockets.<br>
-
-Youtube Link for project 4 part 2 implementation - https://www.youtube.com/watch?v=SwTbdf50CGU  <br>
-
-For more implmentation details, please check the respective projects in the given repository.
