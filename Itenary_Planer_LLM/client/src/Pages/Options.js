@@ -1,13 +1,17 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
 
+// Definition of the Options component
 const Options = () => {
+    // useNavigate hook from react-router-dom for navigation
     const navigate = useNavigate();
 
+    // Function to redirect to a specified path
     const redirectTo = (path) => {
         navigate(path);
     };
 
+    // JSX for rendering the component
     return (
         <div className="options-container">
             <h1>Choose an Option</h1>
@@ -19,4 +23,5 @@ const Options = () => {
     );
 };
 
+// Exporting the Options component for use in other parts of the application
 export default Options;

@@ -2,14 +2,18 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './ChatPage.css';
 
+// LandingPage component definition
 const LandingPage = () => {
     const navigate = useNavigate();
+
+    // State variables
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
     const [needHotel, setNeedHotel] = useState(false);
     const [needFlight, setNeedFlight] = useState(false);
     const [location, setLocation] = useState('');
 
+    // Function to set session storage items
     const setSessionStorageItems = (latitude, longitude) => {
         sessionStorage.setItem('latitude', latitude);
         sessionStorage.setItem('longitude', longitude);
@@ -19,6 +23,7 @@ const LandingPage = () => {
         sessionStorage.setItem('needFlight', needFlight);
     };
 
+    // Function to handle location input manually
     const handleManualLocationInput = async () => {
         try {
             const response = await fetch('http://127.0.0.1:5000/process-location', {
@@ -41,6 +46,7 @@ const LandingPage = () => {
         }
     };
     
+    // Function to handle geolocation permission
     const handleGeolocationPermission = () => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
@@ -59,6 +65,7 @@ const LandingPage = () => {
         }
     };
 
+    // JSX for rendering the component
     return (
         <div className="chat-container-landing">
             <h1>Welcome to Our App</h1>

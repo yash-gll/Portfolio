@@ -5,7 +5,7 @@ import re
 import openai
 
 # Set up the OpenAI API
-openai.api_key = "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"  # Replace with your actual API key
+openai.api_key = "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"  # Replace with your actual API key
 GPT_API_URL = "https://api.openai.com/v1/chat/completions"
 
 # Define the system message

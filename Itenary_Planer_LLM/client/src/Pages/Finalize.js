@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Finalize.css';
+import { useNavigate } from 'react-router-dom';
 
+// Component to display restaurant details
 const RestaurantCard = ({ restaurant }) => {
     return (
         <div className="card">
@@ -13,6 +15,7 @@ const RestaurantCard = ({ restaurant }) => {
     );
 };
 
+// Component to display activity details
 const ActivityCard = ({ activity }) => {
     return (
         <div className="card">
@@ -25,7 +28,9 @@ const ActivityCard = ({ activity }) => {
     );
 };
 
+// Main component to finalize trip details
 const Finalize = () => {
+    // State for storing selected restaurants and activities
     const [selectedRestaurants, setSelectedRestaurants] = useState([]);
     const [selectedActivities, setSelectedActivities] = useState([]);
 
@@ -36,12 +41,13 @@ const Finalize = () => {
     const needFlight = sessionStorage.getItem('needFlight') === 'true';
 
     // Calculate duration of stay
-    const diffInMs = new Date(endDate).getTime() - new Date(startDate).getTime()
-    const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
+    const diffInMs = new Date(endDate).getTime() - new Date(startDate).getTime();
+    const diffInDays = Math.round(diffInMs / (1000 * 60 * 60 * 24));
     const duration = diffInDays >= 0 ? `${diffInDays} days` : 'Invalid date range';
 
     const latitude = sessionStorage.getItem('latitude');
     const longitude = sessionStorage.getItem('longitude');
+    // Fetching selected items on component mount
     useEffect(() => {
         fetch('http://127.0.0.1:5000/get-selected')
             .then(response => response.json())
@@ -52,6 +58,12 @@ const Finalize = () => {
             })
             .catch(error => console.error('Error fetching selected items:', error));
     }, []);
+
+    const navigate = useNavigate();
+
+    const redirectTo = (path) => {
+        navigate(path);
+    };
 
     return (
         <div>
@@ -84,6 +96,10 @@ const Finalize = () => {
                         </div>
                     ))}
                 </div>
+            </div>
+            <div className="finalize-container">
+                <button onClick={() => redirectTo("/gpt")}>Use GPT to generate</button>
+                <button onClick={() => redirectTo("/Bard")}>Use BARD to generate</button>
             </div>
         </div>
     );

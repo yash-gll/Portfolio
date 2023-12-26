@@ -7,6 +7,8 @@ import Restaurants from './Pages/Restaurants';
 import Events from './Pages/Events';
 import OutdoorActivities from './Pages/OutdoorActivities';
 import Finalize from './Pages/Finalize';
+import GPT from './Pages/GPT';
+import BARD from './Pages/Bard';
 
 const App = () => {
   return (
@@ -18,6 +20,8 @@ const App = () => {
             <Route path="/events" element={<Events />} />
             <Route path="/outdoor-activities" element={<OutdoorActivities />} />
             <Route path="/finalize" element={<Finalize />} />
+            <Route path="/gpt" element={<GPT />} />
+            <Route path="/Bard" element={<BARD />} />
           </Routes>
       </Router>
   );

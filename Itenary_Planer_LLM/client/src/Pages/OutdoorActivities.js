@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './ChatPage.css';
 
+// Function to handle checkbox changes, sends data to the server
 const handleCheckboxChange = async (activity, isChecked) => {
     // Prepare the data to be sent to the server
     const payload = { activity, isSelected: isChecked };
@@ -18,6 +19,7 @@ const handleCheckboxChange = async (activity, isChecked) => {
     console.log("Server response on selection:", data);
 };
 
+// Component to display each activity in a card format
 const ActivityCard = ({ activity }) => {
     return (
         <div className="restaurant-card">
@@ -34,12 +36,14 @@ const ActivityCard = ({ activity }) => {
     );
 };
 
-
+// Main component for activities
 const Activities = () => {
+    // State for chat history and user input
     const [chatHistory, setChatHistory] = useState([]);
     const [userInput, setUserInput] = useState('');
     const [, forceRerender] = useState();
 
+    // Effect to fetch chat history on component mount
     useEffect(() => {
         const fetchChatHistory = async () => {
             const response = await fetch('http://127.0.0.1:5000/get-chat-history?origin=Outdoor');
@@ -54,6 +58,7 @@ const Activities = () => {
 
     const triggerRerender = () => forceRerender({});
 
+    // Function to handle sending messages
     const handleSend = async () => {
         if (!userInput.trim()) return;
 
@@ -78,6 +83,7 @@ const Activities = () => {
         triggerRerender();
     };
 
+    // Function to send messages to the server
     const sendMessageToServer = async (message) => {
         try{
             const latitude = sessionStorage.getItem('latitude');
@@ -107,6 +113,7 @@ const Activities = () => {
         }
     };
 
+    // JSX for rendering the chat interface
     return (
         <div className="chat-container">
             <div className="messages">

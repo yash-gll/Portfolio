@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './ChatPage.css';
 
+// Function to handle changes in the restaurant selection checkbox
 const handleCheckboxChange = async (restaurant, isChecked) => {
     // Prepare the data to be sent to the server
     const payload = { restaurant, isSelected: isChecked };
@@ -14,10 +15,12 @@ const handleCheckboxChange = async (restaurant, isChecked) => {
         body: JSON.stringify(payload),
     });
 
+    // Parsing the JSON response from the server
     const data = await response.json();
     console.log("Server response on selection:", data);
 };
 
+// Component to display individual restaurant information
 const RestaurantCard = ({ restaurant }) => {
     return (
         <div className="restaurant-card">
@@ -34,10 +37,12 @@ const RestaurantCard = ({ restaurant }) => {
     );
 };
 
+// Main component to handle the chat interface and restaurant selection
 const Restaurants = () => {
     const [chatHistory, setChatHistory] = useState([]);
     const [userInput, setUserInput] = useState('');
 
+    // Effect hook to fetch chat history on component mount
     useEffect(() => {
         const fetchChatHistory = async () => {
             const response = await fetch('http://127.0.0.1:5000/get-chat-history?origin=Restaurant');
@@ -50,6 +55,7 @@ const Restaurants = () => {
         fetchChatHistory();
     }, []);
 
+    // Function to handle sending messages
     const handleSend = async () => {
         if (!userInput.trim()) return;
 
@@ -61,6 +67,7 @@ const Restaurants = () => {
         setUserInput('');
     };
 
+    // Function to send messages to the server and handle the response
     const sendMessageToServer = async (message) => {
         try{
             const latitude = sessionStorage.getItem('latitude');
